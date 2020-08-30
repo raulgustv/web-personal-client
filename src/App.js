@@ -2,8 +2,6 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import routes from './config/routes';
 
-
-
 import './App.scss';
 
 function App() {
@@ -20,12 +18,13 @@ function App() {
 
 
 function RouterWithSubRoutes(route){
- // console.log(route);
+//  console.log(route);
+//  return true;
   return (
     <Route
       path={route.path}
       exact={route.exact}
-      render={props => <route.component routers={routes.routes} {...props} />}
+      render={props => <route.component routes={route.routes} {...props} />}
     />
   );
 }
