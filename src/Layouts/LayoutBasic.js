@@ -1,16 +1,37 @@
-import React from 'react'
+import React from 'react';
+import {Route} from 'react-router-dom';
 import { Layout } from 'antd';
 
-export default function LayoutBasic() {
+import './LayoutBasic.scss';
+
+export default function LayoutBasic(props) {
+   // console.log(props);
+
+    const{routes} = props;
+    const {Content, Footer} = Layout;
+
     return (
-        <div>
+    
             <Layout>
-                <h2>Menu Sider</h2>
-                <div>
-                    Contenido....
-                </div>
-                <h5>Footer...</h5>
+                <h2>Menu...</h2>
+                <Layout>
+                    <Content>
+                        <LoadRoutes routes={routes} />
+                    </Content>
+                    <Footer>Raul R 2020</Footer> 
+                </Layout>
             </Layout>
-        </div>
+        
     )
+}
+
+function LoadRoutes({routes}){
+    return routes.map((route,index) =>(
+        <Route 
+            key={index}
+            path={route.path}
+            exact = {route.exact}
+            component={route.component}
+        />
+    ));
 }
