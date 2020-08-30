@@ -1,1 +1,48 @@
+
+$defaultFontSize: 16px;
+
 $primary-color: #0098d3;
+$primary-color-hover: #0280b3;
+$menu-color: #252527;
+
+$font-light: #fff;
+$font-grey: #808080;
+$font-grey-dark: #000;
+$font-grey-light: #e8e8e8;
+
+$font-dark: #000;
+
+
+$border-light: #fff;
+$border-grey: #808080;
+$border-grey-dark: #595959;
+$border-grey-light: #e8e8e8;
+$border-dark: #000;
+$border-dark-light: #252527;
+
+$background-light: #fff;
+$background-grey: #808080;
+$background-grey-dark: #595959;
+$background-grey-light: #e8e8e8;
+$background-dark: #000;
+$background-dark-light: #252527;
+$background-error: #ff00001f;
+$background-success: #84b84c1f;
+
+$success: #84b84c;
+$error: #f00;
+
+
+//Responive downsize
+$media-break-point-down-xs: 413.98px;
+$media-break-point-down-sm: 573.98px;
+$media-break-point-down-md: 767.98px;
+$media-break-point-down-lg: 991.98px;
+$media-break-point-down-xl: 1199.98px;
+
+//responsive up size
+$media-break-point-up-xs: 320px;
+$media-break-point-up-sm: 576px;
+$media-break-point-up-md: 768px;
+$media-break-point-up-lg: 992px;
+$media-break-point-up-xl: 1200px;
