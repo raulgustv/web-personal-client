@@ -1,6 +1,6 @@
 import React from 'react';
-import {Route, } from 'react-router-dom';
-import {Layout} from 'antd';
+import { Route, Switch } from 'react-router-dom';
+import { Layout } from 'antd';
 
 import './LayoutAdmin.scss';
 import routes from '../config/routes';
@@ -8,8 +8,8 @@ import routes from '../config/routes';
 export default function LayoutAdmin(props) {
     // console.log(props);
 
-    const {routes} = props;
-    const {Header, Content, Footer} = Layout;
+    const { routes } = props;
+    const { Header, Content, Footer } = Layout;
 
     return (
         <Layout>
@@ -25,16 +25,21 @@ export default function LayoutAdmin(props) {
     )
 }
 
-function LoadRoutes({routes}){
+function LoadRoutes({ routes }) {
     // console.log(props);
 
-    return routes.map((route, index) =>(
-        <Route 
-            key={index}
-            path={route.path}
-            exact={route.exact}
-            component={route.component}
+    return (
+        <Switch>
+            {routes.map((route, index) =>(
+            <Route
+                key={index}
+                path={route.path}
+                exact={route.exact}
+                component={route.component}
+            />
+    ))}
+        </Switch>
+    )
 
-        />
-    ));
+
 }

@@ -11,6 +11,9 @@ import AdminSignIn from '../pages/Admin/SignIn';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 
+//otros
+import Error404 from '../pages/Error404';
+
 const routes = [
     {
         path: "/admin", //cuando el path sea este
@@ -26,6 +29,9 @@ const routes = [
                 path:"/admin/login",
                 component: AdminSignIn,
                 exact: true
+            },
+            {
+                component: Error404
             }
 
         ]
@@ -44,6 +50,9 @@ const routes = [
                 path: "/contact",
                 component: Contact,
                 exact: true
+            },
+            {
+                component: Error404
             }
         ]
     }
